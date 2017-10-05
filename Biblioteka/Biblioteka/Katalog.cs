@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Biblioteka
 {
-    public class Katalog
+    class Katalog
     {
         internal String tytul { get; }
         internal String autor { get; }

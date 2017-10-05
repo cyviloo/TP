@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Biblioteka
 {
-    public class OpisStanu
+    class OpisStanu
     {
         private Katalog katalog { get; }
         public enum Stan { wolna, wypozyczona, zarezerwowana, niedostepna }

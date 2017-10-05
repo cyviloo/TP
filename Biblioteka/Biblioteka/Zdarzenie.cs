@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Biblioteka
 {
-    public class Zdarzenie
+    class Zdarzenie
     {
         private OpisStanu stan { get; }
         private Wykaz kto { get; }

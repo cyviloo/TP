@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Biblioteka
 {
-    public class Wykaz
+    class Wykaz
     {
         internal int id { get; }
         internal String imie { get; set; }
