@@ -4,46 +4,17 @@ using System.Text;
 
 namespace Biblioteka
 {
-    class Wykaz
+    public class Wykaz
     {
-        private List<Czytelnik> lista { get; }
-        private static int NEXT_ID = 0;
+        internal int id { get; }
+        internal String imie { get; set; }
+        internal String nazwisko { get; set; }
 
-        public Wykaz(List<Czytelnik> czytelnicy)
+        public Wykaz(int ID, String imie, String nazwisko)
         {
-            lista = czytelnicy;
-        }
-
-        public Wykaz() : this(new List<Czytelnik>())
-        {
-        }
-
-        public void dodajCzytelnika(String imie, String nazwisko)
-        {
-            lista.Add(new Czytelnik(getNextAvailableId(), imie, nazwisko));
-        }
-
-        public Czytelnik getCzytelnik(int id)
-        {
-            foreach (Czytelnik czytelnik in lista)
-                if (czytelnik.id == id)
-                    return czytelnik;
-            return null;
-        }
-
-        public void usunCzytelnika(Czytelnik czytelnik)
-        {
-            lista.Remove(czytelnik);
-        }
-
-        public void usunCzytelnika(int id)
-        {
-            lista.Remove(getCzytelnik(id));
-        }
-
-        private int getNextAvailableId()
-        {
-            return ++NEXT_ID;
+            id = ID;
+            this.imie = imie;
+            this.nazwisko = nazwisko;
         }
     }
 }
