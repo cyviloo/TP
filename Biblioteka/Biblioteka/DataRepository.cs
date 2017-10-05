@@ -63,10 +63,15 @@ namespace Biblioteka
         public void updateWykaz(int ID, Wykaz element)
         {
             Wykaz result = db.wykaz.Find(x => x.id == ID);
-            result = element;
+            result.Clone(element);
         }
 
+        public void deleteWykaz(Wykaz element)
+        {
+            db.wykaz.Remove(element);
+        }
 
+        
         private class DataContext
         {
             public List<Wykaz> wykaz;
